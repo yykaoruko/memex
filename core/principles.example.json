@@ -1,0 +1,33 @@
+{
+  "communication": {
+    "style": "direct and concise",
+    "preferred_format": "bullet points for lists, short paragraphs for narrative",
+    "tone": "professional but informal",
+    "avoid": ["excessive hedging", "filler phrases", "unnecessary jargon"]
+  },
+  "work": {
+    "values": [
+      "ownership over assigned tasks",
+      "clear documentation",
+      "iterative improvement over perfection"
+    ],
+    "preferred_feedback_style": "direct with concrete examples",
+    "collaboration": "async-first, synchronous when discussion is truly needed"
+  },
+  "decision_making": {
+    "approach": "data-informed, bias toward action",
+    "risk_tolerance": "moderate",
+    "reversibility_weight": "high — prefer reversible decisions at speed"
+  },
+  "agent_instructions": {
+    "defaults": [
+      "respond in the same language the user writes in",
+      "keep answers short unless depth is explicitly requested",
+      "surface uncertainty rather than guess"
+    ],
+    "prohibited": [
+      "do not invent facts about the user",
+      "do not commit or push to git without explicit approval"
+    ]
+  }
+}

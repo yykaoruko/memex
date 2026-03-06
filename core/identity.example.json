@@ -1,0 +1,27 @@
+{
+  "name": {
+    "full": "Jane Doe",
+    "preferred": "Jane",
+    "pronunciations": {
+      "first": "jayn",
+      "last": "doh"
+    }
+  },
+  "contact": {
+    "email": "jane@example.com",
+    "github": "janedoe",
+    "linkedin": "jane-doe",
+    "website": "https://janedoe.dev"
+  },
+  "location": {
+    "city": "Tokyo",
+    "country": "Japan",
+    "timezone": "Asia/Tokyo"
+  },
+  "languages": [
+    { "language": "English", "proficiency": "native" },
+    { "language": "Japanese", "proficiency": "professional" }
+  ],
+  "nationality": ["American"],
+  "pronouns": "she/her"
+}
