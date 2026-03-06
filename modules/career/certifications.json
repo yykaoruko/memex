@@ -1,0 +1,11 @@
+{
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuer": "Amazon Web Services",
+      "issued": "2023-05",
+      "expires": "2026-05",
+      "tags": ["cloud", "aws", "infrastructure"]
+    }
+  ]
+}

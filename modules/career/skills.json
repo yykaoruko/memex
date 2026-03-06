@@ -1,0 +1,58 @@
+{
+  "skills": [
+    {
+      "name": "TypeScript",
+      "category": "language",
+      "proficiency": "expert",
+      "tags": ["frontend", "backend"]
+    },
+    {
+      "name": "Python",
+      "category": "language",
+      "proficiency": "proficient",
+      "tags": ["backend", "data", "scripting"]
+    },
+    {
+      "name": "Node.js",
+      "category": "runtime",
+      "proficiency": "expert",
+      "tags": ["backend", "api"]
+    },
+    {
+      "name": "React",
+      "category": "framework",
+      "proficiency": "proficient",
+      "tags": ["frontend"]
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "database",
+      "proficiency": "proficient",
+      "tags": ["backend", "data"]
+    },
+    {
+      "name": "AWS",
+      "category": "cloud",
+      "proficiency": "proficient",
+      "tags": ["infrastructure", "backend"]
+    },
+    {
+      "name": "Docker / Kubernetes",
+      "category": "infrastructure",
+      "proficiency": "familiar",
+      "tags": ["infrastructure", "devops"]
+    },
+    {
+      "name": "System Design",
+      "category": "soft",
+      "proficiency": "expert",
+      "tags": ["architecture", "leadership"]
+    },
+    {
+      "name": "Technical Mentoring",
+      "category": "soft",
+      "proficiency": "proficient",
+      "tags": ["leadership", "team"]
+    }
+  ]
+}

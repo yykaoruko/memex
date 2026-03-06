@@ -1,0 +1,12 @@
+{
+  "degrees": [
+    {
+      "institution": "Example University",
+      "degree": "Bachelor of Engineering",
+      "field": "Computer Science",
+      "period": { "start": "2015-04", "end": "2019-03" },
+      "location": "Tokyo, Japan",
+      "notes": "Graduated with honors. Thesis on distributed systems."
+    }
+  ]
+}

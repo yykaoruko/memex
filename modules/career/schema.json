@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "modules/career/schema.json",
+  "title": "Career Module Schema",
+  "description": "Defines the shape of all structured files under modules/career/",
+
+  "definitions": {
+    "period": { "$ref": "../../schema/common.schema.json#/definitions/period" },
+    "tags":   { "$ref": "../../schema/common.schema.json#/definitions/tags" }
+  },
+
+  "history": {
+    "type": "object",
+    "properties": {
+      "jobs": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "company":         { "type": "string" },
+            "role":            { "type": "string" },
+            "period":          { "$ref": "#/definitions/period" },
+            "location":        { "type": "string" },
+            "employment_type": { "type": "string", "enum": ["full-time", "part-time", "contract", "freelance"] },
+            "bullets":         { "type": "array", "items": { "type": "string" } },
+            "tags":            { "$ref": "#/definitions/tags" }
+          },
+          "required": ["company", "role", "period", "bullets", "tags"]
+        }
+      }
+    }
+  },
+
+  "education": {
+    "type": "object",
+    "properties": {
+      "degrees": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "institution": { "type": "string" },
+            "degree":      { "type": "string" },
+            "field":       { "type": "string" },
+            "period":      { "$ref": "#/definitions/period" },
+            "location":    { "type": "string" },
+            "notes":       { "type": "string" }
+          },
+          "required": ["institution", "degree", "field", "period"]
+        }
+      }
+    }
+  },
+
+  "skills": {
+    "type": "object",
+    "properties": {
+      "skills": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name":        { "type": "string" },
+            "category":    { "type": "string", "enum": ["language", "runtime", "framework", "database", "cloud", "infrastructure", "soft", "other"] },
+            "proficiency": { "type": "string", "enum": ["familiar", "proficient", "expert"] },
+            "tags":        { "$ref": "#/definitions/tags" }
+          },
+          "required": ["name", "category", "proficiency"]
+        }
+      }
+    }
+  },
+
+  "projects": {
+    "type": "object",
+    "properties": {
+      "projects": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name":        { "type": "string" },
+            "period":      { "$ref": "#/definitions/period" },
+            "context":     { "type": "string", "enum": ["work", "personal", "open-source"] },
+            "description": { "type": "string" },
+            "stack":       { "type": "array", "items": { "type": "string" } },
+            "url":         { "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }] },
+            "tags":        { "$ref": "#/definitions/tags" }
+          },
+          "required": ["name", "period", "context", "description", "tags"]
+        }
+      }
+    }
+  },
+
+  "meta": {
+    "type": "object",
+    "properties": {
+      "preferences": {
+        "type": "object",
+        "properties": {
+          "job_types":  { "type": "array", "items": { "type": "string" } },
+          "roles":      { "type": "array", "items": { "type": "string" } },
+          "industries": { "type": "array", "items": { "type": "string" } },
+          "locations":  { "type": "array", "items": { "type": "string" } },
+          "work_style": { "type": "string", "enum": ["onsite", "hybrid", "remote"] },
+          "languages":  { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "availability": {
+        "type": "object",
+        "properties": {
+          "status":              { "type": "string", "enum": ["open", "passive", "closed"] },
+          "notice_period_weeks": { "type": "integer" }
+        }
+      }
+    }
+  }
+}

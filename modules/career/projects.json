@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "name": "Internal Developer Platform",
+      "period": { "start": "2023-01", "end": "2023-09" },
+      "context": "work",
+      "description": "Designed and built a self-service deployment platform used by 4 engineering teams, reducing time-to-production for new services from 2 weeks to 1 day.",
+      "stack": ["TypeScript", "Node.js", "Kubernetes", "AWS"],
+      "url": null,
+      "tags": ["platform", "devops", "architecture", "leadership"]
+    },
+    {
+      "name": "OSS: sql-type-gen",
+      "period": { "start": "2021-06", "end": null },
+      "context": "personal",
+      "description": "Open-source CLI tool that generates TypeScript types from PostgreSQL schemas. 800+ GitHub stars.",
+      "stack": ["TypeScript", "PostgreSQL"],
+      "url": "https://github.com/example/sql-type-gen",
+      "tags": ["open-source", "tooling", "typescript", "postgresql"]
+    }
+  ]
+}

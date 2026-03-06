@@ -1,0 +1,30 @@
+{
+  "jobs": [
+    {
+      "company": "Example Corp",
+      "role": "Senior Software Engineer",
+      "period": { "start": "2022-04", "end": null },
+      "location": "Tokyo, Japan",
+      "employment_type": "full-time",
+      "bullets": [
+        "Led migration of legacy monolith to microservices, reducing deploy time by 60%",
+        "Designed and shipped internal developer platform adopted by 4 teams",
+        "Mentored 3 junior engineers through weekly 1-on-1s and code reviews"
+      ],
+      "tags": ["backend", "architecture", "leadership", "mentoring", "platform"]
+    },
+    {
+      "company": "Startup Inc",
+      "role": "Software Engineer",
+      "period": { "start": "2019-07", "end": "2022-03" },
+      "location": "Tokyo, Japan",
+      "employment_type": "full-time",
+      "bullets": [
+        "Built REST APIs serving 500K daily active users using Node.js and PostgreSQL",
+        "Reduced p95 API latency by 40% through query optimization and caching",
+        "Collaborated with product and design to ship 2 major product launches"
+      ],
+      "tags": ["backend", "api", "performance", "nodejs", "postgresql"]
+    }
+  ]
+}

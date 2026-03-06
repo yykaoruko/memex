@@ -1,0 +1,10 @@
+{
+  "name": "memex",
+  "private": true,
+  "scripts": {
+    "mcp": "mcp-server-filesystem ."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server-filesystem": "latest"
+  }
+}

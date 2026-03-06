@@ -1,0 +1,18 @@
+{
+  "preferences": {
+    "job_types": ["full-time", "contract"],
+    "roles": ["Software Engineer", "Tech Lead", "Staff Engineer"],
+    "industries": ["SaaS", "developer tools", "fintech"],
+    "locations": ["Tokyo", "remote"],
+    "work_style": "hybrid",
+    "languages": ["Japanese", "English"]
+  },
+  "availability": {
+    "status": "open",
+    "notice_period_weeks": 4
+  },
+  "cv": {
+    "preferred_format": "one-page",
+    "language": "English"
+  }
+}
