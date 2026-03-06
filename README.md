@@ -1,5 +1,6 @@
 # memex
-
+![memex-banner](./banner.png)   
+  
 Personal knowledge base used as a shared dataset across AI agents.
 
 ## Structure
