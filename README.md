@@ -59,6 +59,12 @@ Run once after cloning:
 npm install
 ```
 
+To prevent agents from accidentally pushing changes to the remote, disable push:
+
+```bash
+git remote set-url --push origin no_push
+```
+
 ---
 
 ## Setup for Cursor
