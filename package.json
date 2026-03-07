@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "mcp": "mcp-server-filesystem .",
+    "mcp": "mcp-server-filesystem ./core ./modules ./views ./exports ./schema",
     "mcp:prompts": "node src/index.js"
   },
   "dependencies": {
