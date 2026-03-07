@@ -77,7 +77,7 @@ Open (or create) `~/.cursor/mcp.json` and add the entry below, replacing
 ```json
 {
   "mcpServers": {
-    "user-memex": {
+    "memex": {
       "command": "npm",
       "args": ["run", "mcp"],
       "cwd": "/absolute/path/to/memex"
@@ -88,7 +88,7 @@ Open (or create) `~/.cursor/mcp.json` and add the entry below, replacing
 
 ### 2. Verify
 
-Restart Cursor (or reload via **Settings → MCP**). You should see `user-memex` listed
+Restart Cursor (or reload via **Settings → MCP**). You should see `memex` listed
 as an active server.
 
 ---
@@ -104,7 +104,7 @@ actual path to this repository:
 ```json
 {
   "mcpServers": {
-    "user-memex": {
+    "memex": {
       "command": "npm",
       "args": ["run", "mcp"],
       "cwd": "/absolute/path/to/memex"
@@ -115,7 +115,7 @@ actual path to this repository:
 
 ### 2. Verify
 
-Start Gemini CLI and run `/mcp list` — `user-memex` should appear with its available
+Start Gemini CLI and run `/mcp list` — `memex` should appear with its available
 tools. Run `/mcp refresh` if tools do not appear immediately.
 
 ---
@@ -135,7 +135,7 @@ Open (or create) the config file for your OS and add the entry below, replacing
 ```json
 {
   "mcpServers": {
-    "user-memex": {
+    "memex": {
       "command": "npm",
       "args": ["run", "mcp"],
       "cwd": "/absolute/path/to/memex"

@@ -1,8 +1,10 @@
 {
   "name": "memex",
   "private": true,
+  "type": "module",
   "scripts": {
-    "mcp": "mcp-server-filesystem ."
+    "mcp": "mcp-server-filesystem .",
+    "mcp:prompts": "node src/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",

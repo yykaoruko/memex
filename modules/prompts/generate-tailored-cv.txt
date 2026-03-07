@@ -1,6 +1,6 @@
 # Tailored CV Generator — MCP-Native Prompt
 
-<!-- Prerequisites: user-memex MCP server must be active -->
+<!-- Prerequisites: memex MCP server must be active -->
 <!-- Input: a job posting URL -->
 <!-- Output: a tailored CV saved to exports/career/cv-<company>-<YYYY-MM>.md -->
 
@@ -8,7 +8,7 @@
 
 ## How to use
 
-1. Ensure the `user-memex` MCP server is active (Cursor → Settings → MCP)
+1. Ensure the `memex` MCP server is active (Cursor → Settings → MCP)
 2. Pass the job posting URL as the `jobDescriptionUrl` argument when invoking the prompt
 3. Paste this prompt and run — the agent will load all data live from the memex files
 

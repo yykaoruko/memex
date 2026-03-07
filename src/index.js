@@ -2,6 +2,7 @@ import { promises as fs } from "fs";
 import { fileURLToPath } from "url";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { z } from "zod";
 
 const server = new McpServer({
     name: "memex-mcp-server",
@@ -18,10 +19,7 @@ server.registerPrompt(
         title: "generate tailored cv",
         description: "generate tailored cv based on the user's profile and preferences",
         argsSchema: {
-            jobDescriptionUrl: {
-                type: "string",
-                description: "the url of the job description",
-            },
+            jobDescriptionUrl: z.string().describe("the url of the job description"),
         },
     },
     async (args, _extra) => {
