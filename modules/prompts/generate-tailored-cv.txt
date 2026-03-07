@@ -1,0 +1,127 @@
+# Tailored CV Generator — MCP-Native Prompt
+
+<!-- Prerequisites: user-memex MCP server must be active -->
+<!-- Input: a job posting URL -->
+<!-- Output: a tailored CV saved to exports/career/cv-<company>-<YYYY-MM>.md -->
+
+---
+
+## How to use
+
+1. Ensure the `user-memex` MCP server is active (Cursor → Settings → MCP)
+2. Pass the job posting URL as the `jobDescriptionUrl` argument when invoking the prompt
+3. Paste this prompt and run — the agent will load all data live from the memex files
+
+---
+
+## Prompt
+
+```
+You are an expert CV writer and career coach. Generate a tailored CV for the candidate
+using their personal memex data. Follow each step exactly.
+
+---
+
+## Step 1 — Read the job posting
+
+Fetch and read the full content of this job posting:
+{{jobDescriptionUrl}}
+
+Extract:
+- Job title
+- Company name and a brief description of what they do
+- Key responsibilities
+- Must-have requirements (technical and soft skills)
+- Nice-to-have requirements
+- Tone and language style of the posting (e.g. formal, startup-casual, technical)
+
+---
+
+## Step 2 — Load candidate data from memex
+
+Use the MCP filesystem tools to read the following files. Treat their contents as the
+sole source of truth. Do not invent, assume, or embellish anything beyond what is written.
+
+Core:
+- core/identity.json          → name, contact details, location, languages
+
+Career facts (modules):
+- modules/career/history.json      → employment history
+- modules/career/skills.json       → skills with proficiency levels
+- modules/career/projects.json     → selected projects
+- modules/career/education.json    → education
+- modules/career/certifications.json → certifications
+- modules/career/awards.json       → awards
+
+Career context (views):
+- views/career/intro.md       → self-introduction drafts (tone reference)
+- views/career/motivations.md → what drives the candidate (use for profile tone)
+- views/career/goals.md       → career direction (use only if directly relevant)
+
+---
+
+## Step 3 — Generate the tailored CV
+
+Write a complete, tailored CV in Markdown following these rules.
+
+### Tailoring rules
+
+1. **Profile/Summary**: Rewrite to directly mirror the language, priorities, and keywords
+   from the job posting. Open with the job title they're hiring for if it matches.
+2. **Employment History**: Keep all roles. Re-order or emphasize bullets to highlight what
+   is most relevant. Bold key phrases that match job requirements.
+3. **Skills**: List the most relevant skills first. Omit skills clearly irrelevant to the role.
+4. **Selected Projects**: Include the 1–2 most relevant projects. Reframe outcome
+   descriptions to resonate with what this company values.
+5. **Education & Certifications**: Include all. Move certifications higher if the role is
+   infrastructure- or cloud-focused.
+6. **Awards**: Include only if it adds value for this role.
+7. **Tone**: Match the tone of the job posting.
+
+### Output format
+
+Output the CV as a single Markdown document using this structure:
+
+---
+
+# [Candidate full name]
+[City, Country] · [Email] · [LinkedIn URL] · [Website if relevant]
+
+## Profile
+[2–3 sentences tailored to the role]
+
+## Employment History
+
+### [Role] — [Company] | [Period] | [Location]
+[One-line company description if helpful]
+- [bullet]
+- [bullet]
+
+(repeat for each role, most recent first)
+
+## Skills
+[Grouped by category, most relevant first]
+
+## Selected Projects
+
+### [Project Name] | [Period]
+**Stack:** ...
+[Description reframed for what this company cares about]
+
+## Education
+...
+
+## Certifications
+...
+
+## Awards *(include section only if relevant)*
+...
+
+---
+
+After generating the CV, save it to:
+exports/career/cv-[YYYYMMDD]-[company-slug].md
+
+where [company-slug] is a lowercase hyphenated version of the company name and [YYYY-MM]
+is today's date. Create the exports/career/ directory if it does not exist.
+```

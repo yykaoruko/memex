@@ -5,6 +5,7 @@
     "mcp": "mcp-server-filesystem ."
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
     "@modelcontextprotocol/server-filesystem": "latest"
   }
 }
